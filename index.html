@@ -7,14 +7,9 @@
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
-  <script type="text/javascript">
-    if(screen.orientation.type == "portrait-primary"){
-        alert("قم بتدوير هاتفك إلى الوضع الأفقي للعب هذه اللعبة");
-    }
-</script>
   <body>
     <div id="unity-container" class="unity-desktop">
-      <canvas id="unity-canvas" width=1024 height=576></canvas>
+      <canvas id="unity-canvas" width=944 height=531></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
@@ -61,11 +56,11 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/WinBuild.loader.js";
+      var loaderUrl = buildUrl + "/WinBuildApple.loader.js";
       var config = {
-        dataUrl: buildUrl + "/WinBuild.data",
-        frameworkUrl: buildUrl + "/WinBuild.framework.js",
-        codeUrl: buildUrl + "/WinBuild.wasm",
+        dataUrl: buildUrl + "/WinBuildApple.data",
+        frameworkUrl: buildUrl + "/WinBuildApple.framework.js",
+        codeUrl: buildUrl + "/WinBuildApple.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "kyan",
         productName: "Kyan Ramadan Game",
@@ -96,16 +91,16 @@
         canvas.style.width = window.innerWidth + 'px';
         canvas.style.height = window.innerHeight + 'px';
 
-        //unityShowBanner('WebGL builds are not supported on mobile devices.');
+        unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
-        canvas.style.width = "1024px";
-        canvas.style.height = "576px";
+        canvas.style.width = "944px";
+        canvas.style.height = "531px";
       }*/
 
-      canvas.style.width = "1024px";
-      canvas.style.height = "576px";
+      canvas.style.width = "944px";
+      canvas.style.height = "531px";
 
       loadingBar.style.display = "block";
 
